@@ -9,6 +9,8 @@ CShip::CShip(SHIP_TYPE _shipType)
 
 CShip::~CShip()
 {
+	delete[] m_shipPosArr;
+	m_shipPosArr = nullptr;
 }
 
 void CShip::AddShipPos(int _idx, tPosition _pos)

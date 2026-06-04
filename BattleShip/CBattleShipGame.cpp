@@ -17,6 +17,14 @@ CBattleShipGame::CBattleShipGame()
 
 CBattleShipGame::~CBattleShipGame()
 {
+	delete[] m_mapAnswer;
+	m_mapAnswer = nullptr;
+
+	delete[] m_mapPlay;
+	m_mapPlay = nullptr;
+
+	delete[] m_shipArr;
+	m_shipArr = nullptr;
 }
 
 void CBattleShipGame::Run()

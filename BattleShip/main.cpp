@@ -1,14 +1,22 @@
 #include <iostream>
 #include "CBattleShipGame.h"
 
+#define _CRTDBG_MAP_ALLOC
+#include <crtdbg.h>
+
 int main()
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
 	unsigned int seed = time(0);
 	//seed = 1;
 	srand(seed);
 
 	CBattleShipGame* pBattleShipGame = new CBattleShipGame;
 	pBattleShipGame->Run();
+
+	delete pBattleShipGame;
+	pBattleShipGame = nullptr;
 }
 
 //목표
